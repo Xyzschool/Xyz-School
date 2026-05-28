@@ -29,14 +29,62 @@
 
     <div class="box">
         <h3>📞 संपर्क करें</h3>
-        <p><b>फोन:</b> 1234567890</p>
+        <p><b>फोन:</b> 8219539635</p>
         <p><b>पता:</b> अपने स्कूल का पता यहां डालें</p>
-        <a class="btn" href="https://wa.me/919876543210?text=Namaste,%20mujhe%20admission%20ki%20jankari%20chahiye">WhatsApp पर बात करें</a>
+        <a class="btn" href="https://wa.me/918219539635?text=Namaste,%20mujhe%20admission%20ki%20jankari%20chahiye">WhatsApp पर बात करें</a>
     </div>
 
     <div class="box">
         <h3>📝 ऑनलाइन एडमिशन फॉर्म</h3>
-        <p>फॉर्म भरने के लिए WhatsApp बटन दबाएं। हम आपको फॉर्म भेज देंगे।</p>
+        <p>नीचे दाएं कोने में हरे बटन "📝 फॉर्म भरें" पे क्लिक करें</p>
     </div>
+    
+<!-- Contact Form Popup Button -->
+<button onclick="openForm()" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-size: 16px; cursor: pointer; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">📝 फॉर्म भरें</button>
+
+<!-- The Form Popup -->
+<div id="myForm" style="display: none; position: fixed; bottom: 90px; right: 20px; border: 3px solid #f1f1f1; z-index: 1001; background-color: white; max-width: 300px; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <form onsubmit="submitForm(event)" style="max-width: 300px; padding: 10px; background-color: white;">
+    <h2 style="margin-top: 0;">Admission Form</h2>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" id="name" required style="width: 100%; padding: 12px; margin: 5px 0 15px 0; border: none; background: #f1f1f1; box-sizing: border-box;">
+
+    <label for="phone"><b>Phone</b></label>
+    <input type="tel" placeholder="Enter Phone Number" id="phone" required style="width: 100%; padding: 12px; margin: 5px 0 15px 0; border: none; background: #f1f1f1; box-sizing: border-box;">
+
+    <label for="message"><b>Message</b></label>
+    <textarea placeholder="Enter Message" id="message" required style="width: 100%; padding: 12px; margin: 5px 0 15px 0; border: none; background: #f1f1f1; box-sizing: border-box; height: 80px;"></textarea>
+
+    <button type="submit" style="background-color: #04AA6D; color: white; padding: 14px 20px; border: none; cursor: pointer; width: 100%; margin-bottom:10px; opacity: 0.9;">Submit</button>
+    <button type="button" onclick="closeForm()" style="background-color: red; color: white; padding: 14px 20px; border: none; cursor: pointer; width: 100%; opacity: 0.9;">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function submitForm(event) {
+  event.preventDefault();
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+  
+  var whatsappNumber = "918219539635"; 
+  var url = "https://wa.me/" + whatsappNumber + "?text=" 
+    + "*Name:* " + name + "%0a"
+    + "*Phone:* " + phone + "%0a" 
+    + "*Message:* " + message;
+  
+  window.open(url, '_blank');
+  closeForm();
+}
+</script>
 </body>
 </html>
