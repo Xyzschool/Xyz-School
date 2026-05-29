@@ -44,4 +44,228 @@
             object-fit: cover; 
         }
         .box { 
-            background: white;
+            background: white; 
+            padding: 18px; 
+            margin: 15px 0; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        .demo-note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin: 15px 0;
+            border: 1px solid #ffeaa7;
+        }
+        h1, h2, h3 { margin: 0 0 10px 0; }
+        .btn { 
+            background: #0d6efd; 
+            color: white; 
+            padding: 12px 22px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            display: inline-block; 
+            font-weight: bold; 
+            margin: 5px; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 15px;
+        }
+        .btn-green { background: #198754; }
+        .btn-orange { background: #fd7e14; }
+        .btn-red { background: #dc3545; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 15px; 
+        }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 10px; 
+            text-align: left; 
+        }
+        th { background-color: #0066cc; color: white; }
+        .hidden { display: none; }
+        .subject-tag { 
+            background: #e7f1ff; 
+            color: #0d6efd; 
+            padding: 8px 15px; 
+            border-radius: 20px; 
+            margin: 5px; 
+            display: inline-block; 
+            font-weight: bold; 
+        }
+        .school-img {
+            border-radius: 10px; 
+            max-width: 100%; 
+            height: auto;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="demo-note">
+        ⚠️ नोट: यह एक डेमो स्कूल है, वास्तविक स्कूल नहीं। केवल वेबसाइट सीखने के लिए बनाया गया है।
+    </div>
+
+    <center>
+        <img src="school-photo.jpg" alt="Demo School Students" class="school-img" width="350">
+        <p style="font-style: italic; color: #555; margin-top:8px;">"डेमो प्राइवेट स्कूल के छात्र - पहाड़ों में शिक्षा का जोश"</p>
+    </center>
+    
+    <div class="header">
+        <img src="logo.png" alt="School Logo" class="logo">
+        <div class="profile">
+            <img src="profile-coding.jpg" alt="Founder Profile">
+            <div>
+                <h1>डेमो प्राइवेट स्कूल XYZ</h1>
+                <p style="margin:5px 0; font-size:14px;">प्रिंसिपल: डॉक्टर घनश्याम | वाइस प्रिंसिपल: प्रोफेसर प्रताप सिंह</p>
+            </div>
+        </div>
+        <h2>एडमिशन ओपन 2026-27</h2>
+        <p>ज्येष्ठा</p>
+    </div>
+
+    <div class="box" style="text-align: center;">
+        <h3>👇 जानकारी के लिए विकल्प चुनें</h3>
+        <button class="btn btn-green" onclick="showSection('courseBox')">📚 पाठ्यक्रम देखें</button>
+        <button class="btn btn-orange" onclick="showSection('admissionBox')">🎓 एडमिशन जानकारी</button>
+        <button class="btn" onclick="showSection('applyBox')">📝 अप्लाई करें</button>
+    </div>
+
+    <div id="courseBox" class="box hidden">
+        <h3>📚 उपलब्ध पाठ्यक्रम</h3>
+        <p>हमारे डेमो स्कूल में निम्नलिखित मुख्य विषय पढ़ाए जाते हैं:</p>
+        <div>
+            <span class="subject-tag">इतिहास</span>
+            <span class="subject-tag">भूगोल</span>
+            <span class="subject-tag">राजनीति</span>
+        </div>
+        <p style="margin-top:15px;"><b>विशेषताएं:</b> NCERT पैटर्न, अनुभवी शिक्षक, वीकली टेस्ट, डाउट क्लास</p>
+        <button class="btn btn-red" onclick="hideSection('courseBox')">बंद करें</button>
+    </div>
+
+    <div id="admissionBox" class="box hidden">
+        <h3>🎓 एडमिशन जानकारी 2026-27</h3>
+        <p><b>1. स्टेप:</b> नीचे "अप्लाई करें" बटन से फॉर्म भरें</p>
+        <p><b>2. दस्तावेज:</b> जन्म प्रमाण पत्र, आधार कार्ड, 2 पासपोर्ट फोटो</p>
+        <p><b>3. स्कूल समय:</b> सुबह 9 बजे से दोपहर 2 बजे तक</p>
+        
+        <button class="btn" onclick="showFees()">⏰ कोर्स ड्यूरेशन और फीस देखें</button>
+        
+        <div id="feesBox" class="hidden" style="margin-top:20px;">
+            <h3>💰 कोर्स ड्यूरेशन और फीस</h3>
+            <table>
+                <tr>
+                    <th>कोर्स ड्यूरेशन</th>
+                    <th>कुल फीस</th>
+                </tr>
+                <tr>
+                    <td>3 महीने वाला कोर्स</td>
+                    <td>₹600</td>
+                </tr>
+                <tr>
+                    <td>6 महीने वाला कोर्स</td>
+                    <td>₹900</td>
+                </tr>
+                <tr>
+                    <td>1 साल वाला कोर्स</td>
+                    <td>₹1200</td>
+                </tr>
+            </table>
+            <p style="font-size:14px; margin-top:10px;"><b>नोट:</b> इतिहास, भूगोल, राजनीति की फीस ऊपर दी गई फीस में शामिल है।</p>
+        </div>
+        
+        <br><button class="btn btn-red" onclick="hideSection('admissionBox')" style="margin-top:15px;">बंद करें</button>
+    </div>
+
+    <div id="applyBox" class="box hidden">
+        <h3>📝 एडमिशन के लिए अप्लाई करें</h3>
+        <form id="admissionForm" onsubmit="submitToWhatsApp(event)">
+            <label>छात्र का नाम:</label>
+            <input type="text" id="studentName" placeholder="पूरा नाम लिखें" required>
+            
+            <label>कक्षा चुनें:</label>
+            <select id="studentClass" required>
+                <option value="">-- कक्षा चुनें --</option>
+                <option value="कक्षा 6">कक्षा 6</option>
+                <option value="कक्षा 7">कक्षा 7</option>
+                <option value="कक्षा 8">कक्षा 8</option>
+                <option value="कक्षा 9">कक्षा 9</option>
+                <option value="कक्षा 10">कक्षा 10</option>
+                <option value="कक्षा 11">कक्षा 11</option>
+                <option value="कक्षा 12">कक्षा 12</option>
+            </select>
+
+            <label>कोर्स ड्यूरेशन चुनें:</label>
+            <select id="courseDuration" required>
+                <option value="">-- ड्यूरेशन चुनें --</option>
+                <option value="3 महीने - ₹600">3 महीने - ₹600</option>
+                <option value="6 महीने - ₹900">6 महीने - ₹900</option>
+                <option value="1 साल - ₹1200">1 साल - ₹1200</option>
+            </select>
+
+            <label>अभिभावक का मोबाइल नंबर:</label>
+            <input type="tel" id="mobileNumber" placeholder="10 अंकों का नंबर" pattern="[0-9]{10}" required>
+            
+            <button type="submit" class="btn btn-green" style="width:100%; margin-top:15px;">WhatsApp पर डिटेल भेजें</button>
+        </form>
+        <br><button class="btn btn-red" onclick="hideSection('applyBox')">बंद करें</button>
+    </div>
+
+    <div class="box">
+        <h3>📍 स्कूल का पता</h3>
+        <p><b>पता:</b> डेमो प्राइवेट स्कूल XYZ, ज्येष्ठा</p>
+        <p><b>प्रिंसिपल:</b> डॉक्टर घनश्याम</p>
+        <p><b>वाइस प्रिंसिपल:</b> प्रोफेसर प्रताप सिंह</p>
+        <p><b>नोट:</b> एडमिशन संबंधित जानकारी के लिए ऊपर फॉर्म भरें।</p>
+    </div>
+
+<script>
+function showSection(id) {
+    document.getElementById("courseBox").style.display = "none";
+    document.getElementById("admissionBox").style.display = "none";
+    document.getElementById("applyBox").style.display = "none";
+    document.getElementById("feesBox").style.display = "none";
+    document.getElementById(id).style.display = "block";
+    window.scrollTo(0, document.getElementById(id).offsetTop - 20);
+}
+
+function hideSection(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+function showFees() {
+    document.getElementById("feesBox").style.display = "block";
+}
+
+function submitToWhatsApp(event) {
+    event.preventDefault();
+    
+    let name = document.getElementById("studentName").value;
+    let studentClass = document.getElementById("studentClass").value;
+    let duration = document.getElementById("courseDuration").value;
+    let mobile = document.getElementById("mobileNumber").value;
+    
+    let message = `*डेमो स्कूल एडमिशन फॉर्म*%0A%0A*नाम:* ${name}%0A*कक्षा:* ${studentClass}%0A*कोर्स:* ${duration}%0A*मोबाइल:* ${mobile}%0A%0Aकृपया एडमिशन कन्फर्म करें।`;
+    
+    let whatsappNumber = "918219539635"; 
+    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+    
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+    </html>
