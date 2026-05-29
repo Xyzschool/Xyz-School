@@ -110,6 +110,7 @@
             box-sizing: border-box;
         }
         label { font-weight: bold; }
+        .staff-list p { margin: 8px 0; }
     </style>
 </head>
 <body>
@@ -123,17 +124,12 @@
             <img src="profile-coding.jpg" alt="Founder Profile" class="profile-img">
             <div>
                 <h1>डेमो प्राइवेट स्कूल XYZ</h1>
-                <p style="margin:5px 0; font-size:14px;">प्रिंसिपल: डॉक्टर घनश्याम | वाइस प्रिंसिपल: प्रोफेसर प्रताप सिंह</p>
+                <p style="margin:5px 0; font-size:14px;">प्रिंसिपल: डॉ घनश्याम सिंह | वाइस प्रिंसिपल: प्रताप सिंह</p>
             </div>
         </div>
         <h2>एडमिशन ओपन 2026-27</h2>
         <p>ज्येष्ठा</p>
     </div>
-
-    <center>
-        <img src="school-photo.jpg" alt="Demo School Students" class="school-img" width="350">
-        <p style="font-style: italic; color: #555; margin-top:8px;">"डेमो प्राइवेट स्कूल के छात्र - पहाड़ों में शिक्षा का जोश"</p>
-    </center>
 
     <div class="box" style="text-align: center;">
         <h3>👇 जानकारी के लिए विकल्प चुनें</h3>
@@ -149,6 +145,7 @@
             <span class="subject-tag">इतिहास</span>
             <span class="subject-tag">भूगोल</span>
             <span class="subject-tag">राजनीति</span>
+            <span class="subject-tag">गणित</span>
         </div>
         <p style="margin-top:15px;"><b>विशेषताएं:</b> NCERT पैटर्न, अनुभवी शिक्षक, वीकली टेस्ट, डाउट क्लास</p>
         <button class="btn btn-red" onclick="hideSection('courseBox')">बंद करें</button>
@@ -182,7 +179,7 @@
                     <td>₹1200</td>
                 </tr>
             </table>
-            <p style="font-size:14px; margin-top:10px;"><b>नोट:</b> इतिहास, भूगोल, राजनीति की फीस ऊपर दी गई फीस में शामिल है।</p>
+            <p style="font-size:14px; margin-top:10px;"><b>नोट:</b> इतिहास, भूगोल, राजनीति, गणित की फीस ऊपर दी गई फीस में शामिल है।</p>
         </div>
         
         <br><button class="btn btn-red" onclick="hideSection('admissionBox')" style="margin-top:15px;">बंद करें</button>
@@ -222,13 +219,21 @@
         <br><button class="btn btn-red" onclick="hideSection('applyBox')">बंद करें</button>
     </div>
 
-    <div class="box">
-        <h3>📍 स्कूल का पता</h3>
+    <div class="box staff-list">
+        <h3>👨‍🏫 स्कूल स्टाफ</h3>
+        <p><b>प्रिंसिपल:</b> डॉ घनश्याम सिंह</p>
+        <p><b>वाइस प्रिंसिपल:</b> प्रताप सिंह</p>
+        <p><b>डिपार्टमेंट ऑफ़ जियोग्राफी:</b> मिस्टर राकेश कुमार</p>
+        <p><b>डिपार्टमेंट ऑफ़ मैथमेटिक्स:</b> जय किशन</p>
+        <p><b>संपर्क नंबर:</b> 9876543210</p>
         <p><b>पता:</b> डेमो प्राइवेट स्कूल XYZ, ज्येष्ठा</p>
-        <p><b>प्रिंसिपल:</b> डॉक्टर घनश्याम</p>
-        <p><b>वाइस प्रिंसिपल:</b> प्रोफेसर प्रताप सिंह</p>
         <p><b>नोट:</b> एडमिशन संबंधित जानकारी के लिए ऊपर फॉर्म भरें।</p>
     </div>
+
+    <center>
+        <img src="school-photo.jpg" alt="Demo School Students" class="school-img" width="350">
+        <p style="font-style: italic; color: #555; margin-top:8px;">"डेमो प्राइवेट स्कूल के छात्र - पहाड़ों में शिक्षा का जोश"</p>
+    </center>
 
 <script>
 function showSection(id) {
@@ -258,7 +263,7 @@ function submitToWhatsApp(event) {
     
     let message = `*डेमो स्कूल एडमिशन फॉर्म*%0A%0A*नाम:* ${name}%0A*कक्षा:* ${studentClass}%0A*कोर्स:* ${duration}%0A*मोबाइल:* ${mobile}%0A%0Aकृपया एडमिशन कन्फर्म करें।`;
     
-    let whatsappNumber = "918219539635"; 
+    let whatsappNumber = "919876543210"; 
     let whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
     
     window.open(whatsappURL, "_blank");
